@@ -21,5 +21,23 @@ The dataset contains the folders for each class with the image samples
 6. Bird-drop - 169
 
 
+## Dataset balancing
+Here the dataset is imbalanced where the `number of samples` in all the classes are `not same`. The model trained in this dataset will be biased where the class which has higher number of sample `[Dusty]` will have better performance compared to other classes.
 
+![samples before augmentation](./images/samples.png)
 
+### Data Augmentation
+To balance the samples in the dataset we do the process of augmentation where we do simple transformations like fliping, rotation etc to the existing sample and make them as new samples which results in the increased samples.
+
+Here in this the data augmentation is done with the `ImageDataGenerator` from `tensorflow.keras.preprocessing.image` with the following parameters
+```bash
+rotation_range=20,
+horizontal_flip=True,
+vertical_flip=True,
+brightness_range=[0.7, 1.3],
+zoom_range=0.1,
+width_shift_range=0.1,
+height_shift_range=0.1,
+fill_mode='nearest'
+```
+![samples after augmentation](./images/after_augmentation.png)
