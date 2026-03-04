@@ -1,3 +1,7 @@
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange)
+![Streamlit](https://img.shields.io/badge/Deployed-Streamlit-red)
+
 # solar_pannel_image_classification
 This repo contains developing a classification model which can be used to classify drone images of the solarpannels which would classify them into the following classes
 
